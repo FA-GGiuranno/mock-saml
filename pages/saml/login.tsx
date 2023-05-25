@@ -8,8 +8,7 @@ export default function Login() {
   const { id, audience, acsUrl, providerName, relayState } = router.query;
 
   const [state, setState] = useState({
-    username: 'jackson',
-    domain: 'example.com',
+    username: 'jackson@example.com',
     acsUrl: 'https://jackson-demo.boxyhq.com/api/oauth/saml',
     audience: 'https://saml.boxyhq.com',
   });
@@ -39,7 +38,7 @@ export default function Login() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const { username, domain } = state;
+    const { username } = state;
 
     const response = await fetch(`/api/saml/auth`, {
       method: 'POST',
@@ -47,7 +46,7 @@ export default function Login() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email: `${username}@${domain}`,
+        email: `${username}`,
         id,
         audience: audience || state.audience,
         acsUrl: acsUrl || state.acsUrl,
@@ -126,26 +125,12 @@ export default function Login() {
                       ref={emailInp}
                       autoComplete='off'
                       type='text'
-                      placeholder='jackson'
+                      placeholder='jackson@example.com'
                       value={state.username}
                       onChange={handleChange}
                       className='input input-bordered'
                       title='Please provide a mock email address'
                     />
-                  </div>
-                  <div className='form-control'>
-                    <label className='label'>
-                      <span className='label-text font-bold'>Domain</span>
-                    </label>
-                    <select
-                      name='domain'
-                      id='domain'
-                      className='select select-bordered'
-                      onChange={handleChange}
-                      value={state.domain}>
-                      <option value='example.com'>@example.com</option>
-                      <option value='example.org'>@example.org</option>
-                    </select>
                   </div>
                   <div className='form-control col-span-2'>
                     <label className='label'>
@@ -169,8 +154,7 @@ export default function Login() {
             <div className='alert alert-info'>
               <div>
                 <span className='text-sm text-white'>
-                  This is a simulated login screen, feel free to pick any username but you are restricted to
-                  two domains example.com and example.org. But this should allow you to test all combinations
+                  This is a simulated login screen, feel free to pick any email address. But this should allow you to test all combinations
                   of your authentication and user modelling.
                 </span>
               </div>
