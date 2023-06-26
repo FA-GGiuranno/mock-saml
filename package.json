@@ -18,7 +18,7 @@
     "react-dom": "18.2.0",
     "react-gtm-module": "2.0.11",
     "xml-crypto": "3.0.1",
-    "xml2js": "0.5.0",
+    "xml2js": "0.6.0",
     "xmlbuilder": "15.1.1"
   },
   "devDependencies": {
@@ -31,10 +31,10 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.39.0",
     "eslint-config-next": "13.2.4",
-    "postcss": "8.4.23",
+    "postcss": "8.4.24",
     "prettier": "2.8.7",
-    "prettier-plugin-tailwindcss": "0.2.8",
-    "tailwindcss": "3.3.1",
+    "prettier-plugin-tailwindcss": "0.3.0",
+    "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
   },
   "engines": {
