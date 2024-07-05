@@ -82,63 +82,63 @@ export default function Login() {
               <form onSubmit={handleSubmit}>
                 <div className='grid grid-cols-2 gap-y-1 gap-x-5'>
                   {!acsUrl ? (
-                    <div className='col-span-2'>
-                      <div className='form-control'>
-                        <label className='label'>
-                          <span className='label-text font-bold'>ACS URL</span>
-                        </label>
-                        <input
-                          type='text'
-                          className='input input-bordered'
-                          name='acsUrl'
-                          id='acsUrl'
-                          ref={acsUrlInp}
-                          autoComplete='off'
-                          placeholder='https://sso.eu.boxyhq.com/api/oauth/saml'
-                          value={state.acsUrl}
-                          onChange={handleChange}
-                        />
-                        <label className='label'>
-                          <span className='label-text-alt'>This is where we will post the SAML Response</span>
-                        </label>
+                      <div className='col-span-2'>
+                        <div className='form-control'>
+                          <label className='label'>
+                            <span className='label-text font-bold'>ACS URL</span>
+                          </label>
+                          <input
+                              type='text'
+                              className='input input-bordered'
+                              name='acsUrl'
+                              id='acsUrl'
+                              ref={acsUrlInp}
+                              autoComplete='off'
+                              placeholder='https://sso.eu.boxyhq.com/api/oauth/saml'
+                              value={state.acsUrl}
+                              onChange={handleChange}
+                          />
+                          <label className='label'>
+                            <span className='label-text-alt'>This is where we will post the SAML Response</span>
+                          </label>
+                        </div>
+                        <div className='form-control col-span-2'>
+                          <label className='label'>
+                            <span className='label-text font-bold'>Audience</span>
+                          </label>
+                          <input
+                              type='text'
+                              className='input input-bordered'
+                              name='audience'
+                              id='audience'
+                              autoComplete='off'
+                              placeholder='https://saml.boxyhq.com'
+                              value={state.audience}
+                              onChange={handleChange}
+                          />
+                        </div>
                       </div>
-                      <div className='form-control col-span-2'>
-                        <label className='label'>
-                          <span className='label-text font-bold'>Audience</span>
-                        </label>
-                        <input
-                          type='text'
-                          className='input input-bordered'
-                          name='audience'
-                          id='audience'
-                          autoComplete='off'
-                          placeholder='https://saml.boxyhq.com'
-                          value={state.audience}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
                   ) : null}
                   <div className='form-control'>
                     <label className='label'>
                       <span className='label-text font-bold'>Email</span>
                     </label>
                     <input
-                      name='username'
-                      id='username'
-                      ref={emailInp}
-                      autoComplete='off'
-                      type='text'
-                      placeholder='jackson'
-                      value={state.username}
-                      onChange={handleChange}
-                      className='input input-bordered'
-                      title='Please provide a mock email address'
+                        name='username'
+                        id='username'
+                        ref={emailInp}
+                        autoComplete='off'
+                        type='text'
+                        placeholder='jackson'
+                        value={state.username}
+                        onChange={handleChange}
+                        className='input input-bordered'
+                        title='Please provide a mock email address'
                     />
                   </div>
-                <div className='form-control'>
+                  <div className='form-control'>
                     <label className='label'>
-                        <span className='label-text font-bold'>Domain</span>
+                      <span className='label-text font-bold'>Domain</span>
                     </label>
                     <input
                         name='domain'
@@ -152,17 +152,17 @@ export default function Login() {
                         className='input input-bordered'
                         title='Please provide a mock email address'
                     />
-                </div>
+                  </div>
                   <div className='form-control col-span-2'>
                     <label className='label'>
                       <span className='label-text font-bold'>Password</span>
                     </label>
                     <input
-                      id='password'
-                      autoComplete='off'
-                      type='password'
-                      defaultValue='samlstrongpassword'
-                      className='input input-bordered'
+                        id='password'
+                        autoComplete='off'
+                        type='password'
+                        defaultValue='samlstrongpassword'
+                        className='input input-bordered'
                     />
                     <label className='label'>
                       <span className='label-text-alt'>Any password works</span>
