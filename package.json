@@ -1,6 +1,6 @@
 {
   "name": "mock-saml",
-  "version": "1.1.2",
+  "version": "1.3.9",
   "description": "Mock SAML is a free SAML 2.0 Identity Provider for testing SAML SSO integrations.",
   "private": true,
   "license": "Apache 2.0",
@@ -8,34 +8,34 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start -p 4000",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "release": "git checkout release && git merge origin/main && release-it && git checkout main && git merge origin/release && git push origin main"
   },
   "dependencies": {
-    "@boxyhq/saml20": "1.1.5",
-    "daisyui": "2.51.5",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-gtm-module": "2.0.11",
-    "xml-crypto": "3.0.1",
-    "xml2js": "0.5.0",
-    "xmlbuilder": "15.1.1"
+    "@boxyhq/saml20": "1.5.1",
+    "daisyui": "4.12.10",
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-gtm-module": "2.0.11"
   },
   "devDependencies": {
-    "@types/node": "18.15.11",
-    "@types/node-forge": "1.3.2",
-    "@types/react": "18.0.34",
-    "@types/react-gtm-module": "2.0.1",
-    "@types/xml-crypto": "1.4.2",
-    "@types/xml2js": "0.4.11",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.2.4",
-    "postcss": "8.4.23",
-    "prettier": "2.8.7",
-    "prettier-plugin-tailwindcss": "0.2.8",
-    "tailwindcss": "3.3.1",
-    "typescript": "5.0.4"
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-gtm-module": "2.0.3",
+    "@typescript-eslint/parser": "7.15.0",
+    "autoprefixer": "10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.4",
+    "json": "11.0.0",
+    "postcss": "8.4.39",
+    "prettier": "3.3.2",
+    "prettier-plugin-tailwindcss": "0.6.5",
+    "release-it": "17.4.1",
+    "tailwindcss": "3.4.4",
+    "typescript": "5.5.3"
   },
   "engines": {
     "node": ">=18.14.0"

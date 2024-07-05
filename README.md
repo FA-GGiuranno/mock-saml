@@ -5,11 +5,9 @@
 
 Mock SAML is a free SAML 2.0 Identity Provider for testing SAML SSO integrations.
 
-Try [Mock SAML](https://mocksaml.com/), our free hosted service.
+## Namespaces
 
-## Source code visualizer
-
-[CodeSee codebase visualizer](https://app.codesee.io/maps/public/893e0610-9bfc-11ec-980d-9f320f34189e)
+Try [Mock SAML](https://mocksaml.com/), our free hosted service. Whilst we use the root domain for our own testing you can create your own unique namespace by navigating to [https://mocksaml.com/namespace/any_name_of_your_choice](https://mocksaml.com/namespace/any_name_of_your_choice).
 
 ## Install
 
@@ -27,6 +25,7 @@ docker run \
   -d boxyhq/mock-saml
 ```
 
+Refer to [env.example](https://github.com/boxyhq/mock-saml/blob/main/.env.example#L5C3-L5C97) for instructions on how to create the key pair.
 Replace `<PUBLIC_KEY>` with Base64 encoded value of public key.
 Replace `<PRIVATE_KEY>` with Base64 encoded value of private key.
 
